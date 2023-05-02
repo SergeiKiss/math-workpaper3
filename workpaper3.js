@@ -26,7 +26,7 @@ console.log('Первый столбец - значение');
 console.log('Второй столбец - частота');
 
 console.log('------');
-Object.entries(freqObj).forEach(([num, freq]) => {
+Object.entries(freqObj).sort(([a], [b]) => a - b).forEach(([num, freq]) => {
   let resultStr = '|';
   if (num < 10) resultStr += ' ';
   resultStr += `${num}|${freq}|`;
