@@ -36,24 +36,27 @@ console.log('------');
 
 // 3.Изобразить графически данные пункта 2 (ОХ- переменные, ОУ-частота
 // возникновения переменных)
-console.log('\n3.Изобразить графически данные пункта 2 (ОХ- переменные, ОУ-частота возникновения переменных)');
 
-// const hist = (roundsCount, rollDie) => {
-//   const bar = '#';
-//   // const numbers = _.times(roundsCount, rollDie);
-//   // const sides = _.range(1, 7);
-//   const
+console.log('\n3. Изобразить графически данные пункта 2 в виде гистограммы');
 
-//   const lines = sides.map((side) => {
-//     const count = numbers.filter((number) => number === side).length;
-//     const displayCount = count !== 0 ? ` ${count}` : '';
-//     return `${side}|${bar.repeat(count)}${displayCount}`;
-//   });
-//   const str = lines.join('\n');
+const freqArr = Object.values(freqObj);
+const maxFreq = Math.max(...freqArr);
 
-//   console.log(str);
-// };
-// hist();
+
+for (let i = maxFreq; i > 0; i--) {
+  let resultStr = ' ';
+  freqArr.forEach((freq) => {
+    if (freq >= i) {
+      resultStr += '* ';
+    } else {
+      resultStr += '  ';
+    }
+  });
+  resultStr += '';
+  console.log(resultStr);
+}
+console.log('------------------------------');
+
 
 // 4.Определить среднее значение выборки (мат.ожидание)
 console.log('\n4.Определить среднее значение выборки (мат.ожидание)');
