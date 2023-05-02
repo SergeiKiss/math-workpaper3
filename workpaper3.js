@@ -42,8 +42,7 @@ console.log('\n3. Изобразить графически данные пун�
 const freqArr = Object.values(freqObj);
 const maxFreq = Math.max(...freqArr);
 
-
-for (let i = maxFreq; i > 0; i--) {
+for (let i = maxFreq; i > 0; i -= 1) {
   let resultStr = ' ';
   freqArr.forEach((freq) => {
     if (freq >= i) {
@@ -56,7 +55,6 @@ for (let i = maxFreq; i > 0; i--) {
   console.log(resultStr);
 }
 console.log('------------------------------');
-
 
 // 4.Определить среднее значение выборки (мат.ожидание)
 console.log('\n4.Определить среднее значение выборки (мат.ожидание)');
