@@ -63,7 +63,7 @@ console.log('Мат.ожидание:', expValue);
 
 // 5.Определить дисперсию
 console.log('\n5.Определить дисперсию');
-const disp = sortedArr.reduce((acc, item) => (item - expValue) ** 2, 0) / length;
+const disp = sortedArr.reduce((acc, item) => acc + (item - expValue) ** 2, 0) / length;
 console.log('Дисперсия:', disp);
 
 // 6.Определить стандартное отклонение (среднее квадратичное
